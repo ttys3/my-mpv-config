@@ -1,5 +1,8 @@
 --[[
 
+https://wiki.archlinux.org/title/Mpv#GNOME_Blank_screen_(Wayland)
+https://gist.github.com/crazygolem/a7d3a2d3c0cee5d072c0cbbbdee69286
+
 Prevent the screen from blanking while a video is playing.
 
 This script is a workaround for the GNOME+Wayland issue documented in the
