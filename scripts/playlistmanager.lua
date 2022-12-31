@@ -8,7 +8,7 @@ local settings = {
   --uses :gsub('pattern', 'replace'), read more http://lua-users.org/wiki/StringLibraryTutorial
   --'all' will match any extension or protocol if it has one
   --uses json and parses it into a lua table to be able to support .conf file
-  
+
   filename_replace = "",
 
 --[=====[ START OF SAMPLE REPLACE, to use remove start and end line
@@ -66,7 +66,7 @@ local settings = {
   playlist_savepath = "/home/anon/Documents/",
 
 
-  --show playlist or filename every time a new file is loaded 
+  --show playlist or filename every time a new file is loaded
   --2 shows playlist, 1 shows current file(filename strip applied) as osd text, 0 shows nothing
   --instead of using this you can also call script-message playlistmanager show playlist/filename
   --ex. KEY playlist-next ; script-message playlistmanager show playlist
@@ -113,7 +113,7 @@ local settings = {
 
   --set title of window with stripped name
   set_title_stripped = false,
-  title_prefix = "SNAD ~ ",
+  title_prefix = " ~ ",
   title_suffix = "",
 
   --slice long filenames, and how many chars to show
@@ -133,7 +133,7 @@ local settings = {
   playlist_header_eng = "[%pos/%plen] ▷ %filename%N%N%N☰ Playlist:", --"Playing: [%pos/%plen] %filename%N%N",
   playlist_header = "正在播放: %filename%N%N高级播放列表 - %cursor/%plen",
   --playlist display signs, prefix is before filename, and suffix after
-  --currently playing file 
+  --currently playing file
   playing_str_prefix = "▷ ",
   playing_str_suffix = " ",
 
@@ -221,7 +221,7 @@ function on_loaded()
   else
     directory = nil
   end
-  
+
   refresh_globals()
   if settings.sync_cursor_on_load then
     cursor=pos
@@ -456,7 +456,7 @@ function draw_playlist()
     start=0
     showall=true
   end
-  if start > math.max(plen-settings.showamount-1, 0) then 
+  if start > math.max(plen-settings.showamount-1, 0) then
     start=plen-settings.showamount
     showrest=true
   end
@@ -661,7 +661,7 @@ function playlist(force_dir)
         end
       end
     end
-    popen:close()    
+    popen:close()
     if c2 > 0 or c>0 then
       mp.osd_message("☰ ["..c + c2.."] files loaded to playlist.")
     else
