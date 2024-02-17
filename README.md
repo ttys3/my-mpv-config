@@ -49,3 +49,7 @@ Note
 
 If the main subtitle stream contains formatting tags which display the subtitle at the top of the screen, it will overlap with the secondary subtitle.
 To prevent this, you could use --no-sub-ass to disable styling in the main subtitle stream.
+
+## refs
+
+https://wiki.archlinux.org/title/mpv#Key_bindings
